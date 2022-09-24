@@ -8,7 +8,7 @@ export default function Featured({ type ,setGenre}) {
   useEffect(() =>{
     const getRandomContact = async () =>{
       try{
-        const res = await axios.get(`movies/random?type=${type}`,{
+        const res = await axios.get(`https://mysterious-tundra-38886.herokuapp.com/api/movies/random?type=${type}`,{
           headers: {
             token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
