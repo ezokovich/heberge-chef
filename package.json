@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://mysterious-tundra-38886.herokuapp.com/api/"
+  "proxy":"https://api-heberge.vercel.app/api/"
 }
