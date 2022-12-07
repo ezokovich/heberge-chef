@@ -9,13 +9,14 @@ import {useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 export default function ListItem({ index ,item }) {
+  const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_URL });
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState({});
   
   useEffect(()=>{
     const getMovie = async ()=>{
       try {
-         const res = await axios.get ("/movies/find/"+item ,{
+         const res = await axiosInstance.get ("/movies/find/"+item ,{
           headers: {
             token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },

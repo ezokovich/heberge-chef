@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Featured({ type ,setGenre}) {
+  const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_URL });
   const [content,setContent] = useState({});
   useEffect(() =>{
     const getRandomContact = async () =>{
       try{
-        const res = await axios.get(`movies/random?type=${type}`,{
+        const res = await axiosInstance.get(`movies/random?type=${type}`,{
           headers: {
             token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
