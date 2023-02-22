@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-premier grand bug au niveau du get de donner le la db le 17/08/2022
+premier grand bug au niveau du get de donner de la db le 17/08/2022
 
 Deixiemme bug qui a duré 4 jours qui était un problème du fetch data par use Location . et voila le resource qui ma permit de resoudre se bug https://stackoverflow.com/questions/69377440/data-is-not-fetching-from-uselocation-in-react
 
