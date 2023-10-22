@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import img from "../../image/logo.png"
 
 export default function Register() {
-  const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_URL });
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -28,7 +27,7 @@ export default function Register() {
     setPassword(passwordRef.current.value);
     setUsername(usernameRef.current.value);
     try{
-      await axiosInstance.post("auth/register",{email,username,password});
+      await axios.post("auth/register",{email,username,password});
       navigate("/login");
     }catch(err){}
   };
